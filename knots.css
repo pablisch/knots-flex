@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --base: #9baba8;
+  --nav: #707b7a;
+  --navHover: #536664;
+  --text: #687471;
+  --navText: #e6f3ef;
+  --main: #d1ddd6;
+  --hoverText: #2c3533;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  
+  body {
+    background-image: url('images/ropeBackground2'); 
+    background-attachment: fixed;
+    background-size: cover; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  nav {
+    background-color: var(--nav);
+    height: 65px;
+  }
+
+  nav .container {
+    height: inherit;
+  }
+
+  nav img {
+    max-width: 45px;
+    max-height: 45px;
+  }
+
+  nav h1 {
+    color: var(--navText);
+  }
+
+  .logo {
+    display: flex;
+
+  }
+
+  .logoText {
+    max-width: 100px;
+    line-height: 0.9;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .links ul {
+    display: flex;
+  }
+
+  .links ul li {
+    list-style-type: none;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--navText);
+    cursor: pointer;
+  }
+
+  nav a:hover {
+    color: #e2ff70;
+  }
+
+  header .container {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+/* Center website */
+
+section a {
+  position: relative;
+}
+
+.panelContainer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.panel1 {
+  flex: 1 300px;
+  height: 350px;
+  margin: 10px;
+  background-size: cover;
+  border: 2px var(--base) solid;
+  border-radius: 20px;
+}
+
+.panelContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1 300px;
+  /* height: 350px; */
+  margin: 10px;
+  background-color: rgba(148, 145, 134, 0.3);
+  border: 2px var(--base) solid;
+  border-radius: 50px;
+}
+
+.photoBox {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  border-radius: 45px 45px 10px 10px;
+  margin: 8px;
+}
+
+.photoBox:hover {
+  opacity: 0.2;
+}
+
+.photoBox .centered:hover {
+  opacity: 1;
+}
+
+section a {
+  text-decoration: none;
+}
+
+/* .panel img {
+  max-width: 400px;
+} */
+
+h2 {
+  text-align: left;
+  color: hsla(47, 12%, 29%, 0.8);
+}
+h3 {
+  text-align: center;
+  color: hsla(47, 12%, 29%, 0.8);
+}
+
+
+/* Content */
+.content {
+  /* background-color: rgba(148, 145, 134, 0.3); */
+  padding: 10px;
+  padding-top: auto;
+  /* border: 1px solid hsla(47, 8%, 45%, 0.8); */
+}
+/* .content:hover {
+  background-color: rgba(254, 254, 254, 0.8);
+  border: 1px solid hsla(51, 6%, 78%, 0.8);
+} */
+.image {
+  opacity: 1;
+  border: 1px solid hsla(47, 8%, 45%, 0.8);
+  max-width: 400px;
+}
+.centered {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 0.8vw;
+  margin: 0px -10px 0px -10px;
+  color: var(--hoverText);
+}
+.content:hover .image{
+  opacity: 0.25;
+}
+.content:hover .centered{
+  opacity: 1;
+}
+.content:hover h3{
+  color: hsla(47, 10%, 54%, 0.8);
+}
+
+
+
+/* Responsive layout - makes a five column-layout instead of ten columns */
+/*@media screen and (max-width: 1500px) {
+  .column {
+    width: 20%;
+  }
+}*/
+/* Responsive layout - alters responsive text inside images */
+@media screen and (max-width: 2000px) {
+  .centered {
+    font-size: 1vw;
+    padding: 4px;
+  }
+}
+/* Responsive layout - alters responsive text inside images */
+@media screen and (max-width: 1800px) {
+  .centered {
+    font-size: 1.1vw;
+    padding: 4px;
+  }
+}
+/* Responsive layout - alters responsive text inside images */
+@media screen and (max-width: 1500px) {
+  .centered {
+    font-size: 1.2vw;
+    padding: 4px;
+  }
+}
+/* Responsive layout - makes a three column stack on top of each other instead five stacked */
+@media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .centered {
+    font-size: 1.9vw;
+    padding: 4px;
+  }
+  navbar {font-size: 0.83rem;}
+}
+/* Responsive layout - makes the two columns stack on top of each other instead three stacked */
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .centered {
+    font-size: 2.5vw;
+    padding: 4px;
+  }
+  .sticky {
+    position: static;
+  }
+}
+/* Responsive layout - makes the single column stack on top of each other instead two stacked */
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .centered {
+    font-size: 4.3vw;
+    padding: 4px;
+  }
+}
